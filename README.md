@@ -52,21 +52,15 @@ Projemizde, **Steam oyun platformundan alınmış kullanıcı yorumları**ndan o
 
 Bu projeyi yerel ortamınızda çalıştırmak ve analizleri tekrarlamak için aşağıdaki adımları izleyin:
 
-1.  **Depoyu Klonlayın:**
-    ```bash
-    git clone [https://github.com/KULLANICI_ADIN/REPO_ADIN.git](https://github.com/KULLANICI_ADIN/REPO_ADIN.git)
-    cd REPO_ADIN
-    ```
-    *(`KULLANICI_ADIN` ve `REPO_ADIN` kısımlarını kendi GitHub kullanıcı adınız ve depo adınız ile değiştirmeyi unutmayın.)*
 
-2.  **Gerekli Kütüphaneleri Yükleyin:**
+1.  **Gerekli Kütüphaneleri Yükleyin:**
     Proje için gerekli tüm Python kütüphaneleri aşağıdadır. Bu kütüphaneleri `pip` ile yükleyebilirsiniz:
     ```bash
     pip install pandas numpy scikit-learn nltk gensim matplotlib
     ```
     *Daha iyi bir yaklaşım için, projenin kök dizininde bir `requirements.txt` dosyası oluşturup tüm bağımlılıkları oraya ekleyebilir ve `pip install -r requirements.txt` komutunu kullanabilirsiniz.*
 
-3.  **NLTK Verilerini İndirin:**
+2.  **NLTK Verilerini İndirin:**
     NLTK kütüphanesinin bazı dil kaynaklarına (tokenizer, durak kelimeler, wordnet) ihtiyaç duyulmaktadır. Bu indirmeler, ilgili Jupyter Notebook'lar içindeki ilk kod hücreleri tarafından otomatik olarak yapılacaktır. Ancak, isterseniz manuel olarak da çalıştırabilirsiniz:
     ```python
     import nltk
@@ -184,3 +178,5 @@ Yapılan analizlerde (özellikle `metin-benzerlik.ipynb` çıktısı baz alınar
 * **Ön İşleme (Lemmatized vs. Stemmed):** Word2Vec modelleri için hem lemmatize edilmiş hem de stemmed edilmiş Steam yorumları kullanılmış ve yine aynı en benzer yorumlar bulunmuştur. Bu, Word2Vec modelinin kendisinin, ön işlemedeki bu ince farklara karşı oldukça dirençli olduğunu veya öğrenilen anlamsal ilişkilerin bu seviyede bir farklılıktan etkilenmediğini göstermektedir.
 
 Genel olarak, Word2Vec modellerinin Steam yorumları üzerindeki performansının, parametre seçiminden (belirli bir aralıkta) çok, modelin anlamsal kelime gömme yeteneğinin TF-IDF'e kıyasla üstün olmasından kaynaklandığı söylenebilir.
+
+ALINAN DATASET KAYNAK:https://www.kaggle.com/datasets/luthfim/steam-reviews-dataset
